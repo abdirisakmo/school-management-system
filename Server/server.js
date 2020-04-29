@@ -8,9 +8,7 @@ const app = express();
 app.use(express.json());
 
 const db = require('./config/keys').mongoURI;
-mongoose.connect(db, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('Mongodb connected'))
-    .catch(() => console.log(err));
+mongoose.connect(db, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
 
 
 //routes
