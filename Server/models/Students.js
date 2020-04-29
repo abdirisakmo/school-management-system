@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
 
 //defining the schema 
-const StudentSchema = new Schema({
+const StudentSchema = mongoose.Schema({
     studentId: {
         type: Number,
         unique: true,
