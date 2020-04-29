@@ -1,20 +1,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-const students = require('./routes/api/students');
+const students = require('./routes/students');
 
 //init the app
 const app = express();
 
-//connect to the database
-mongoose.connect('mongodb://localhost/schoolmanagementsystem', { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection failed'));
-db.once('open', () => console.log('sacsessfully connected'));
+const db = require('./config/keys').mongoURI;
+mongoose.connect(db, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('Mongodb connected'))
+    .catch(() => console.log(err));
 
 
 //routes
-app.use('/api/students', students);
+app.use('/students', students);
 
 
 const port = process.env.PORT || 5000;
