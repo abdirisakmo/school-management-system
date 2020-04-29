@@ -6,13 +6,13 @@
   "scripts": {
     "dev": "nodemon server"
   },
-  "author": "ALPHATECH",
+  "author": "abdirisak",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.8.9"
+    "mongoose": "^5.9.10"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.3"
   }
 }
