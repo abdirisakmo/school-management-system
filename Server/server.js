@@ -1,7 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+/**
+ * impot routes
+ */
 const students = require('./routes/students');
+const teachers = require('./routes/teachers');
 
 //init the app
 const app = express();
@@ -13,7 +17,7 @@ mongoose.connect(db, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTo
 
 //routes
 app.use('/students', students);
-
+app.use('/teachers', teachers);
 
 const port = process.env.PORT || 5000;
 
