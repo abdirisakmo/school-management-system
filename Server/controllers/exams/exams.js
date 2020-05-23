@@ -1,5 +1,5 @@
-const Exams = require('../models/exams');
-const promise = require('../middleware/promise');
+const Exams = require('../../models/exams/exams');
+const promise = require('../../middleware/promise');
 
 /**
  * Get all the exams

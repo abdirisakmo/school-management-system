@@ -7,8 +7,9 @@ const morgan = require('morgan');
  */
 const studentsRouter = require('./routes/students');
 const teachersRouter = require('./routes/teachers');
-const examsRouter = require('./routes/exams');
+const examsRouter = require('./routes/exams/exams');
 const attenceRouter = require('./routes/attendance');
+const gradeRouter = require('./routes/exams/grade');
 
 //init the app
 const app = express();
@@ -24,6 +25,7 @@ app.use('/students', studentsRouter);
 app.use('/teachers', teachersRouter);
 app.use('/exams', examsRouter);
 app.use('/attendance', attenceRouter);
+app.use('/grades', gradeRouter);
 
 
 const port = process.env.PORT || 5000;

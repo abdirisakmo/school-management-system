@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const examController = require('../controllers/exams');
+const examController = require('../../controllers/exams/exams');
 
 router.get('/get', examController.getExams);
 router.post('/add', examController.addExam);
