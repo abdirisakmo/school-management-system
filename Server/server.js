@@ -5,9 +5,10 @@ const morgan = require('morgan');
 /**
  * impot routes
  */
-const students = require('./routes/students');
-const teachers = require('./routes/teachers');
-const exams = require('./routes/exams');
+const studentsRouter = require('./routes/students');
+const teachersRouter = require('./routes/teachers');
+const examsRouter = require('./routes/exams');
+const attenceRouter = require('./routes/attendance');
 
 //init the app
 const app = express();
@@ -19,9 +20,10 @@ mongoose.connect(db, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTo
 
 
 //routes
-app.use('/students', students);
-app.use('/teachers', teachers);
-app.use('/exams', exams);
+app.use('/students', studentsRouter);
+app.use('/teachers', teachersRouter);
+app.use('/exams', examsRouter);
+app.use('/attendance', attenceRouter);
 
 
 const port = process.env.PORT || 5000;
