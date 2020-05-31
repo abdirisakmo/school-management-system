@@ -4,6 +4,6 @@
     
     Node js, express and mongodb in the backend
  
-    React js , Redux, Meterial-ui,Reactstrap, are the frontend
+    Angular , Redux, Meterial-ui,Reactstrap, are the frontend
     
 
