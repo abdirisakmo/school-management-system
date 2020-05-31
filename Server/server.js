@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 
+
 /**
  * impot routes
  */
@@ -15,6 +16,7 @@ const gradeRouter = require('./routes/exams/grade');
 const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
+require('dotenv').config()
 
 const db = require('./config/keys').mongoURI;
 mongoose.connect(db, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
@@ -28,6 +30,6 @@ app.use('/attendance', attenceRouter);
 app.use('/grades', gradeRouter);
 
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
 
 app.listen(port, () => console.log(`Connected Successfully ${port}`));
