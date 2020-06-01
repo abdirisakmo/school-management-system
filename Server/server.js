@@ -11,6 +11,7 @@ const examsRouter = require("./routes/exams/exams");
 const attenceRouter = require("./routes/attendance");
 const gradeRouter = require("./routes/exams/grade");
 const subjectRouter = require("./routes/academic/subjects");
+const classRouter = require("./routes/academic/class");
 
 //init the app
 const app = express();
@@ -32,6 +33,7 @@ app.use("/exams", examsRouter);
 app.use("/attendance", attenceRouter);
 app.use("/grades", gradeRouter);
 app.use("/subjects", subjectRouter);
+app.use("/class", classRouter);
 
 const port = process.env.PORT;
 
