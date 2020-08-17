@@ -2,11 +2,6 @@ const mongoose = require("mongoose");
 
 //defining the schema
 const StudentSchema = new mongoose.Schema({
-  studentId: {
-    type: Number,
-    unique: true,
-    required: true,
-  },
   fullName: {
     type: String,
     required: true,
@@ -33,5 +28,4 @@ const StudentSchema = new mongoose.Schema({
   },
 });
 
-// const Student = mongoose.model('stduents', studentSchema);
 module.exports = Student = mongoose.model("student", StudentSchema);

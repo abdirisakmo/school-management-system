@@ -5,6 +5,7 @@ const morgan = require("morgan");
 /**
  * impot routes
  */
+const userRoutes = require("./routes/users/user");
 const studentsRouter = require("./routes/students");
 const teachersRouter = require("./routes/teachers");
 const examsRouter = require("./routes/exams/exams");
@@ -34,6 +35,7 @@ app.use("/attendance", attenceRouter);
 app.use("/grades", gradeRouter);
 app.use("/subjects", subjectRouter);
 app.use("/class", classRouter);
+app.use("/users", userRoutes);
 
 const port = process.env.PORT;
 
